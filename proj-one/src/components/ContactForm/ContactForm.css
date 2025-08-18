@@ -1,0 +1,22 @@
+.contactContainer{
+    width: 40%;
+    height: 500px;
+    margin: 30px auto;
+    background-color: aquamarine;
+}
+
+.formContainer{
+    width: 100%;
+    padding: 10px;
+}
+
+input{
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+input:focus{
+    border: 3px solid rgb(0, 255, 128);
+}

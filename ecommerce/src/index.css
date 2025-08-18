@@ -1,0 +1,14 @@
+
+
+.btn-gradient{
+background:  linear-gradient(57deg,rgba(235, 54, 204, 1) 0%, rgba(250, 107, 75, 1) 51%);
+
+}
+.redFont{
+    color: red;
+}
+
+.hoverEffectAll:hover{
+    background-color: black;
+    color: white;
+}
