@@ -18,9 +18,12 @@ const Counter = () => {
         }, [count])
 
   return (
-    <div>
+    <div className='text-center mx-auto p-5 w-25'>
         <h1>COUNT: {count}</h1>
+        <div className='text-center d-flex justify-content-between'>
         <button onClick={()=>setCount(count+1)}>Increment</button>
+        <button onClick={()=>setCount(count-1)}>Decrement</button>
+        </div>
       </div>
   )
 }
