@@ -29,7 +29,7 @@ const AuthProvider = ({ children }) => {
     const u = JSON.parse(localStorage.getItem("user"));
     setUser({ ...user, ...u });
   }, []);
-  console.log(loggedUser, "in authProvider");
+  //console.log(loggedUser, "in authProvider");
   return (
     <AuthContext.Provider value={{ login, loggedUser, logout }}>
       {children}

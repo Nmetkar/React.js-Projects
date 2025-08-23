@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useContext  } from 'react';
+import React, { useEffect, useState, useContext, useRef  } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
@@ -8,8 +8,13 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const inputRef = useRef(null);
 
   const {loggedUser, login} = useContext(AuthContext);
+
+  useEffect(() => {
+      inputRef.current.focus()
+  },[]);
 
   function handleLogin(e) {
     e.preventDefault();
@@ -27,8 +32,7 @@ const Login = () => {
       console.log(error);
     }
   }
-
-  console.log(loggedUser, "in login page");
+  //console.log(loggedUser, "in login page");
 
  return (
     <div>
@@ -55,6 +59,7 @@ const Login = () => {
               autoComplete="username"
               placeholder="Enter email"
               onChange={(e)=>setEmail(e.target.value)}
+              ref={inputRef}
             />
              </div>
 

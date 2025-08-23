@@ -59,6 +59,7 @@ const Register = ({setIsRegister}) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
+
            <div className="mb-3">
             <label className="form-label" htmlFor="password">Password</label>
             <input
